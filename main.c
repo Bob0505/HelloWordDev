@@ -5,7 +5,11 @@
 
 int main(int argc, char *argv[]) {
 	
-	printf("Hello Word!!\n");
+	int A;
+
+	A = __LINE__;
+	
+	printf("A = %d\n", A);
 	
 	system("PAUSE");
 	return 0;
