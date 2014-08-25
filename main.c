@@ -5,12 +5,11 @@
 
 int main(int argc, char *argv[]) {
 	
-	int A;
+	int LineNum;
 
-	A = __LINE__;
+	LineNum = __LINE__;
+	printf("<bob>[ln%d] %s, HelloWord!!\n", LineNum, __FUNCTION__);
 	
-	printf("A = %d\n", A);
-	
-	system("PAUSE");
+//	system("PAUSE");
 	return 0;
 }
