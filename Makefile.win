@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o TestPrint.o
-LINKOBJ  = main.o TestPrint.o
+OBJ      = main.o TestPrint.o string.o
+LINKOBJ  = main.o TestPrint.o string.o
 LIBS     = -L"C:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -m32
 INCS     = -I"C:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
 CXXINCS  = -I"C:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
@@ -30,3 +30,6 @@ main.o: main.c
 
 TestPrint.o: TestPrint.c
 	$(CC) -c TestPrint.c -o TestPrint.o $(CFLAGS)
+
+string.o: string.c
+	$(CC) -c string.c -o string.o $(CFLAGS)

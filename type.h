@@ -1,6 +1,7 @@
 typedef unsigned char	UINT8;
 typedef short			UINT16;
 typedef unsigned int	UINT32;
+typedef long long		UINT64;
 
 typedef void (*PRINT_TYPE)(void);
 

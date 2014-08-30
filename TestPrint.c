@@ -13,14 +13,15 @@ LineFunc(void)
 void
 TypesOfSize(void)
 {
-	//UINT8, UINT16, UINT32
-	printf("<bob>[sizeof] char:%d, short:%d, int:%d, long:%d, float:%d, double:%d\n", 
+	//UINT8, UINT16, UINT32, UINT64
+	printf("<bob>[sizeof] char:%d, short:%d, int:%d, long:%d, float:%d, double:%d, long long:%d\n", 
 		sizeof(char),
 		sizeof(short),
 		sizeof(int),
 		sizeof(long),
 		sizeof(float),
-		sizeof(double)
+		sizeof(double),
+		sizeof(long long)
 	);
 }
 
