@@ -7,6 +7,8 @@
 //str		: http://pydoing.blogspot.tw/2010/07/c-stdstring.html
 //memory	: http://pydoing.blogspot.tw/2010/07/c-free.html
 
+//bob-test+
+
 //To Do
 //	str
 //	memory
