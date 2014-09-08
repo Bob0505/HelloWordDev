@@ -7,23 +7,16 @@
 //str		: http://pydoing.blogspot.tw/2010/07/c-stdstring.html
 //memory	: http://pydoing.blogspot.tw/2010/07/c-free.html
 
-//bob-test+
-
 //To Do
-//	str
+//	Status Error 0xffff000 issue
 //	memory
 //linklist
 int main(int argc, char *argv[]) {
 
 	STATUS_TYPE	Status;
 
-//	TestPrint();
-	Status = Str_malloc();
-	printf("Str_malloc (Status:0x%x)\n", Status);
+	TestPrint();
 
-	//need to check
-	Status = STATUS_ERROR_MEMERROR;
-	printf("STATUS_ERROR_MEMERROR:0x%x Status:0x%x\n", STATUS_ERROR_MEMERROR, Status);
 
 
 //	system("PAUSE");

@@ -55,28 +55,64 @@ VarMax(void)
 }
 
 void
+StatusPrt(void)
+{
+	STATUS_TYPE	Status;
+	printf("STATUS_ERROR:0x%x\n", STATUS_ERROR);
+
+	//need to check
+	printf("sizeof(Status):%d, STATUS_ERROR_MEMERROR:0x%x Status:0x%x\n", 
+		sizeof(Status), STATUS_ERROR_MEMERROR, (UINT16)Status);
+
+	printf("  <bob>[ln%d]Status = STATUS_ERROR_MEMERROR;\n", __LINE__);
+	Status = STATUS_ERROR_MEMERROR;
+	if(STATUS_ERROR_MEMERROR == Status)
+		printf("  <bob>[ln%d]STATUS_ERROR_MEMERROR == Status\n", __LINE__);
+
+	printf("  <bob>[ln%d]Status = 0;\n", __LINE__);
+	Status = 0;
+	printf("  <bob>[ln%d]Status: 0x%x\n", __LINE__, Status);
+	if(0x0000 == Status)
+		printf("  <bob>[ln%d]0x0000 == Status\n", __LINE__);
+
+	printf("  <bob>[ln%d]Status = 0x8001;\n", __LINE__);
+	Status = 0x8001;
+	printf("  <bob>[ln%d]Status: 0x%x\n", __LINE__, Status);
+	if(0x8001 == Status)
+		printf("  <bob>[ln%d]0x8001 == Status\n", __LINE__);
+
+	printf("  <bob>[ln%d]Status &= 0x0000ffff;\n", __LINE__);
+	Status &= 0x0000ffff;
+	printf("  <bob>[ln%d]Status: 0x%x\n", __LINE__, Status);
+	if(0x8001 == Status)
+		printf("  <bob>[ln%d]0x8001 == Status\n", __LINE__);
+
+}
+
+void
+Strfunc(void)
+{
+	STATUS_TYPE	Status;
+
+	Status = Str_malloc();
+	printf("Str_malloc (Status:0x%x)\n", Status);
+}
+
+void
 TestPrint()
 {
 
-	PRINT_TYPE	Printflist[] = {LineFunc, TypesOfSize, BitsValue, VarMax, NULL};
+	PRINT_TYPE	Printflist[] = {LineFunc,	TypesOfSize,	BitsValue,	\
+								VarMax,		StatusPrt,		Strfunc,	\
+								NULL};
 	UINT8		index;
-
-#if 0
-	LineFunc();
-	TypesOfSize();
-	BitsValue();
-	VarMax();
-
-	printf("------  ------  ------\n\n");
-#endif
 
 	for(index=0;NULL!=Printflist[index];index++)
 	{ 
 		Printflist[index]();
 		printf("------  ------  ------\n\n");
-	}	
+	}
 
 
-	printf("STATUS_ERROR:0x%x\n", STATUS_ERROR);
 }
 
